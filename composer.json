@@ -1,0 +1,36 @@
+{
+    "name": "morenorafael/evolution-laravel",
+    "description": "Evolution API",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Morenorafael\\EvolutionLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Morenorafael\\EvolutionLaravel\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rafael Moreno",
+            "email": "alejandro8924@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Morenorafael\\EvolutionLaravel\\Providers\\EvolutionServiceProvider"
+            ],
+            "aliases": {
+                "Evolution": "Morenorafael\\EvolutionLaravel\\Facades\\Evolution"
+            }
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "11.x-dev"
+    }
+}
