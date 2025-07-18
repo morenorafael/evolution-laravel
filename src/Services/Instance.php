@@ -6,6 +6,7 @@ use Morenorafael\EvolutionLaravel\Services\Instances\Connect;
 use Morenorafael\EvolutionLaravel\Services\Instances\Create;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Collection;
+use Morenorafael\EvolutionLaravel\Services\Instances\Disconnect;
 use Morenorafael\EvolutionLaravel\Services\Instances\Webhook;
 
 class Instance
@@ -29,6 +30,11 @@ class Instance
     public function connect(): array
     {
         return (new Connect($this->request, $this->data['instanceName']))->makeRequest();
+    }
+
+    public function disconnect(): array
+    {
+        return (new Disconnect($this->request, $this->data['instanceName']))->makeRequest();
     }
 
     public function setWebhook(): Webhook
